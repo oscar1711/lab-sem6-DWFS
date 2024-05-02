@@ -4,11 +4,14 @@ import cors from "cors"
 import BD from '../config/db.js'
 
 import citasRoutes from '../routers/Routers_Citas.js'
+import productoRoutes from '../routers/Routers_Producto.js'
+
 //definimos la variable para trabajar por express
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/citas' , citasRoutes);
+app.use('/producto', productoRoutes)
 //importamos el archivo de las rutas
 
 //autetentificacion
